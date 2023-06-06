@@ -176,7 +176,7 @@ module.hot.accept(reloadCSS);
 "use strict";
 
 require("./styles.css");
-document.getElementById("app").innerHTML = "\n<h1>Hello world</h1>\n<div>\n  We use the same configuration as Parcel to bundle this sandbox, you can find more\n  info about Parcel \n  <a href=\"https://parceljs.org\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.\n</div>\n";
+document.getElementById("app").innerHTML = "\n<!DOCTYPE html>\n<html>\n<head>\n  <title>Task</title>\n</head>\n<body>\n  <h1 id=\"notebook-title\">Hello world</h1>\n\n  <button id=\"my-button\" onclick=\"firstFunct()\">Click me</button>\n\n  <ul id=\"note-list\"></ul>\n\n  <textarea id=\"note-input\" rows=\"4\" cols=\"50\"></textarea>\n\n  <button id=\"add-data\">Add Note</button>\n\n  <script>\n    // Get the necessary elements\n    const h1 = document.getElementById('notebook-title');\n    const addButton = document.getElementById('my-button');\n    const list = document.getElementById('note-list');\n    const input = document.getElementById('note-input');\n    const addDataButton = document.getElementById('add-data');\n\n    function firstFunct(){\n        console.log('Hello world');\n        h1.innerText = 'My notebook';\n    }\n\n    function secondFunct(){\n        const note = input.value.trim();\n      if (note !== '') {\n        const listItem = document.createElement('li');\n        listItem.textContent = note;\n        list.appendChild(listItem);\n        input.value = '';\n      }\n    }\n  </script>\n</body>\n</html>\n";
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -202,7 +202,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41343" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46489" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
