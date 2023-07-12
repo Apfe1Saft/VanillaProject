@@ -176,7 +176,7 @@ module.hot.accept(reloadCSS);
 "use strict";
 
 require("./styles.css");
-document.getElementById("app").innerHTML = "\n<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>Hello World Example</title>\n  </head>\n  <body>\n    <h1 id=\"my-heading\">Hello world</h1>\n\n    <button id=\"my-button\">Click me!</button>\n\n    <ul id=\"my-list\"></ul>\n\n    <textarea id=\"my-textarea\"></textarea>\n\n    <button id=\"add-data\">Add to List</button>\n\n    <script>\n      // Task 2: Creating a button\n      const button = document.getElementById(\"my-button\");\n      button.addEventListener(\"click\", function () {\n        console.log(\"Hello world\");\n\n        // Task 3: Button DOM changes\n        const heading = document.getElementById(\"my-heading\");\n        heading.textContent = \"My notebook\";\n      });\n\n      // Task 4: Unordered list\n      const addDataButton = document.getElementById(\"add-data\");\n      const myList = document.getElementById(\"my-list\");\n      addDataButton.addEventListener(\"click\", function () {\n        // Task 5: Custom text to list\n        const textarea = document.getElementById(\"my-textarea\");\n        const listItem = document.createElement(\"li\");\n        listItem.textContent = textarea.value;\n        myList.appendChild(listItem);\n      });\n    </script>\n  </body>\n";
+document.getElementById("app").innerHTML = "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>Hello World Example</title>\n  </head>\n  <body>\n    <h1>Hello world</h1>\n\n    <button id=\"my-button\">Click me!</button>\n\n    <ul id=\"my-list\"></ul>\n\n    <textarea id=\"my-textarea\"></textarea>\n\n    <button id=\"add-data\">Add to List</button>\n\n    <script>\n      const button = document.getElementById(\"my-button\");\n      button.addEventListener(\"click\", function () {\n        console.log(\"Hello world\");\n      });\n\n      const addDataButton = document.getElementById(\"add-data\");\n      const myList = document.getElementById(\"my-list\");\n      addDataButton.addEventListener(\"click\", function () {\n        const textarea = document.getElementById(\"my-textarea\");\n        const listItem = document.createElement(\"li\");\n        listItem.textContent = textarea.value;\n        myList.appendChild(listItem);\n      });\n    </script>\n  </body>\n</html>\n";
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -202,7 +202,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32921" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43541" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
