@@ -176,14 +176,18 @@ module.hot.accept(reloadCSS);
 "use strict";
 
 require("./styles.css");
-var button = document.getElementById("add-data");
-button.addEventListener("click", clickFunction);
+var button = document.getElementById("my-button");
+button.addEventListener("click", clickMyButton);
+var addData = document.getElementById("add-data");
+addData.addEventListener("click", clickAddData);
 var heading = document.getElementById("my-heading");
 var list = document.getElementById("my-list");
 var message = document.getElementById("my-textarea");
-function clickFunction() {
+function clickMyButton() {
   console.log("hello world");
   heading.innerHTML = "My notebook";
+}
+function clickAddData() {
   var li = document.createElement("li");
   li.innerText = message.value;
   list.appendChild(li);
