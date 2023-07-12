@@ -176,7 +176,18 @@ module.hot.accept(reloadCSS);
 "use strict";
 
 require("./styles.css");
-document.getElementById("app").innerHTML = "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>Hello World Example</title>\n  </head>\n  <body>\n    <h1>Hello world</h1>\n\n    <button id=\"my-button\">Click me!</button>\n\n    <ul id=\"my-list\"></ul>\n\n    <textarea id=\"my-textarea\"></textarea>\n\n    <button id=\"add-data\">Add to List</button>\n\n    <script>\n      const button = document.getElementById(\"my-button\");\n      button.addEventListener(\"click\", function () {\n        console.log(\"Hello world\");\n      });\n\n      const addDataButton = document.getElementById(\"add-data\");\n      const myList = document.getElementById(\"my-list\");\n      addDataButton.addEventListener(\"click\", function () {\n        const textarea = document.getElementById(\"my-textarea\");\n        const listItem = document.createElement(\"li\");\n        listItem.textContent = textarea.value;\n        myList.appendChild(listItem);\n      });\n    </script>\n  </body>\n</html>\n";
+var button = document.getElementById("my-button");
+button.addEventListener("click", clickFunction);
+var heading = document.getElementById("my-heading");
+var list = document.getElementById("my-list");
+var message = document.getElementById("my-textarea");
+function clickFunction() {
+  console.log("hello world");
+  heading.innerHTML = "My notebook";
+  var li = document.createElement("li");
+  li.innerText = message.value;
+  list.appendChild(li);
+}
 },{"./styles.css":"src/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
