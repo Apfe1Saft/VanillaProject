@@ -176,7 +176,7 @@ module.hot.accept(reloadCSS);
 "use strict";
 
 require("./styles.css");
-var button = document.getElementById("my-button");
+var button = document.getElementById("add-data");
 button.addEventListener("click", clickFunction);
 var heading = document.getElementById("my-heading");
 var list = document.getElementById("my-list");

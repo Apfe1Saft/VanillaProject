@@ -1,5 +1,5 @@
 import "./styles.css";
-const button = document.getElementById("my-button");
+const button = document.getElementById("add-data");
 button.addEventListener("click", clickFunction);
 
 let heading = document.getElementById("my-heading");
